@@ -14,15 +14,10 @@
     font-size: 16px; 
     font-weight: 500;
 }
-.footer-note {
-    text-align: right;
-    margin-top: 40px;
-    font-size: 14px;
+.text-body2{
+    font-size: 14px; 
     font-weight: 300;
 }
 .spaced-list li {
     margin-bottom: 16px;
 }
-.tight-quotes {
-    letter-spacing: -0.03em;
-  }
