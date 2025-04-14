@@ -1,0 +1,44 @@
+/* styles.css */
+.album-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 16px; /* Borde redondeado inicial */
+    transition: all 0.4s ease; /* Transición suave */
+  }
+  
+  .album-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all 0.4s ease;
+    border-radius: 16px; /* Borde redondeado inicial de la imagen */
+  }
+  
+  .album-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent 40%, rgba(255, 255, 255, 0.4) 50%, transparent 60%);
+    transform: skewX(-20deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+  }
+  
+  .album-container:hover {
+    border-radius: 0; /* Se elimina el borde redondeado al hacer hover */
+  }
+  
+  .album-container:hover img {
+    transform: scale(1.05); /* La imagen se agranda ligeramente */
+    border-radius: 0; /* También se elimina el borde redondeado de la imagen */
+  }
+  
+  .album-container:hover::before {
+    left: 100%; /* La línea se mueve de izquierda a derecha */
+    opacity: 1; /* La línea se vuelve visible */
+  }
+  
